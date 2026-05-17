@@ -24,8 +24,8 @@
   <main class="page">
     <section class="section">
       <p class="eyebrow">Work Experience</p>
-      <h1>5+ years of cloud platform, CI/CD, automation, and infrastructure experience.</h1>
-      <p class="lead">Experience developing secure cloud-native services, CI/CD automation, observability systems, and AWS infrastructure for regulated enterprise environments.</p>
+      <h1>5+ years of cloud platform, CI/CD, automation, and GenAI infrastructure experience.</h1>
+      <p class="lead">Experience developing secure cloud-native services, CI/CD automation, observability systems, AWS infrastructure, and GenAI applications for regulated enterprise environments.</p>
     </section>
 
     <section class="timeline" aria-label="Professional timeline">
@@ -33,12 +33,13 @@
         <div class="role-header">
           <div>
             <h2>Cloud Engineer - Roche / Foundation Medicine, Inc.</h2>
-            <p class="role-meta">Cloud Platform and AI teams | Dallas, TX</p>
+            <p class="role-meta">Infrastructure and GenAI teams | Dallas, TX</p>
           </div>
           <p class="role-meta">Jan 2022 - May 2026</p>
         </div>
+        <h3>Cloud Platform Infrastructure</h3>
         <ul>
-          <li>Developed and maintained secure cloud-native distributed services, CI/CD automations, and AWS infrastructure across Cloud Platform and AI teams, supporting 50+ development teams in regulated enterprise environments.</li>
+          <li>Developed and maintained secure cloud-native distributed services, CI/CD automations, and AWS infrastructure across Cloud Platform teams, supporting 50+ development teams in regulated enterprise environments.</li>
           <li>Led Jenkins migration efforts by resolving cross-account access blockers, documenting runbooks, designing multi-account network CWAN structure, and standardizing access patterns for 500+ pipelines.</li>
           <li>Delivered Jenkins V2 from greenfield AWS infrastructure to production, including Terraform-based server and ECS agent clusters, Jenkins Configuration as Code, Okta SSO, GitHub Enterprise, SonarQube, JFrog, and Prisma integrations.</li>
           <li>Resolved a multi-month Jenkins JVM stability issue by analyzing heap dumps, adding metaspace JVM arguments, cleaning up 12TB of EFS data, and implementing lifecycle management for ongoing reliability and cost control.</li>
@@ -48,11 +49,23 @@
           <li>Built AWS tagging and cleanup automation that improved tagging compliance, removed unused resources, and helped reduce cloud spend through EBS cleanup, EC2 delete-on-termination enforcement, and tag remediation workflows.</li>
           <li>Built automation to suspend inactive GitHub users and offboard terminated users through Active Directory, reducing GitHub license needs and improving access control.</li>
           <li>Shipped GitHub Enterprise and GitHub Cloud audit logs to Splunk, delivering compliance-level traceability for IT Security.</li>
-          <li>Architected and supported AWS infrastructure for internal AI/GenAI applications, enabling CI/CD automation, secrets management, logging enhancements, and secure data integrations.</li>
+        </ul>
+        <h3>GenAI Applications and Infrastructure</h3>
+        <ul>
+          <li>Designed secure multi-account AWS infrastructure for GenAI applications in HIPAA-audited production environments, using Terraform IaC, IAM roles, encrypted S3, logging, and controlled cross-account access patterns.</li>
+          <li>Designed and deployed internal GenAI applications using AWS Bedrock Knowledge Bases, S3, OpenSearch vector databases, Lambda, and Terraform IaC to support production stakeholder use cases.</li>
+          <li>Standardized deployment patterns for GenAI applications by managing containerized services, application dependencies, and environment-specific configurations across development and production.</li>
+          <li>Developed a low-cost Lambda-based PPT/PPTX parsing solution to support Bedrock Knowledge Base ingestion for file types not natively supported, expanding document coverage while controlling infrastructure cost.</li>
+          <li>Built secure ingestion workflows that pulled versioned documents from third-party SaaS document-management applications into S3, enabling AWS Bedrock Knowledge Bases to ingest current enterprise content.</li>
+          <li>Promoted local and self-hosted LLM options for PHI-sensitive workflows, documenting privacy, infrastructure, deployment, and operational tradeoffs compared with cloud-hosted AI services.</li>
+          <li>Partnered with stakeholders through UAT, translated feedback into Jira stories, secured required approvals, and pushed GenAI applications to production for business users.</li>
         </ul>
         <div class="tags">
           <span class="tag">AWS</span>
           <span class="tag">Terraform</span>
+          <span class="tag">AWS Bedrock</span>
+          <span class="tag">OpenSearch</span>
+          <span class="tag">Lambda</span>
           <span class="tag">Jenkins</span>
           <span class="tag">GitHub Enterprise</span>
           <span class="tag">Cribl</span>

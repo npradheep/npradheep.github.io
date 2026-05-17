@@ -371,7 +371,7 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-top: 28px;
+    padding: 28px 0 36px;
   }
 
   .section-header,
@@ -379,5 +379,77 @@ h3 {
   .footer-inner {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    width: min(100% - 24px, var(--max));
+    padding: 28px 0 44px;
+  }
+
+  .nav {
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .nav-links {
+    gap: 4px;
+  }
+
+  .nav-links a {
+    font-size: 0.86rem;
+    padding: 6px 9px;
+  }
+
+  .hero {
+    gap: 22px;
+    padding: 20px 0 28px;
+  }
+
+  h1 {
+    font-size: clamp(2.15rem, 12vw, 3rem);
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .hero-actions,
+  .button-row {
+    margin-top: 18px;
+  }
+
+  .hero-card,
+  .card,
+  .role,
+  .callout {
+    padding: 18px;
+  }
+
+  .profile-photo {
+    max-height: 280px;
+  }
+
+  .quick-facts {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .fact {
+    padding-top: 10px;
+  }
+
+  .fact strong {
+    font-size: 1.12rem;
+  }
+
+  .section {
+    padding: 28px 0;
   }
 }

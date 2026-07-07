@@ -3,9 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pradheep Nagarajan - Cloud Engineer focused on AWS, platform engineering, CI/CD, observability, security, automation, and AI infrastructure.">
+  <meta name="description" content="Pradheep Nagarajan, Cloud Engineer in Dallas, TX. 5+ years building AWS infrastructure, CI/CD platforms, observability pipelines, and GenAI applications for regulated enterprise environments.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pradheep Nagarajan | Cloud Engineer">
+  <meta property="og:description" content="Cloud Engineer building AWS infrastructure, CI/CD platforms, and observability pipelines for 50+ engineering teams. Runs a production-grade personal cloud at home.">
+  <meta property="og:url" content="https://pradheep.me/">
+  <meta property="og:image" content="https://pradheep.me/dp.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%81%EF%B8%8F%3C/text%3E%3C/svg%3E">
   <title>Pradheep Nagarajan | Cloud Engineer</title>
-  <link rel="stylesheet" href="style.css?v=20260517">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260706">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pradheep Nagarajan",
+    "jobTitle": "Cloud Engineer",
+    "url": "https://pradheep.me",
+    "email": "mailto:admin@pradheep.me",
+    "address": { "@type": "PostalAddress", "addressLocality": "Dallas", "addressRegion": "TX", "addressCountry": "US" },
+    "sameAs": [
+      "https://www.linkedin.com/in/pradheepn/",
+      "https://github.com/npradheep/"
+    ],
+    "knowsAbout": ["AWS", "Terraform", "CI/CD", "Jenkins", "Observability", "Docker", "Python", "AWS Bedrock"]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -24,72 +49,164 @@
   <main class="page">
     <section class="hero">
       <div>
-        <p class="eyebrow">AWS | CI/CD | Platform Engineering | GenAI Infrastructure</p>
-        <h1>Cloud Platform Engineer for AWS, CI/CD, and GenAI systems.</h1>
-        <p class="lead">Cloud Platform Engineer building reliable AWS infrastructure, enterprise CI/CD platforms, observability systems, and secure GenAI applications for regulated production environments.</p>
+        <p class="eyebrow">AWS &middot; Terraform &middot; CI/CD &middot; Observability &middot; GenAI</p>
+        <h1>I build and run the cloud platforms engineering teams depend on.</h1>
+        <p class="lead">Cloud Engineer with 5+ years operating production AWS infrastructure, CI/CD platforms, and observability pipelines for <strong>50+ engineering teams</strong> in regulated enterprise environments. I ship <strong>production GenAI</strong> too: Bedrock-backed chatbots and document pipelines that business teams use every day. And I run a production-grade personal cloud at home, with real users, real on-call, and local LLMs. <strong>Because I like this work enough to do it off the clock too.</strong></p>
         <div class="hero-actions">
-          <a class="button primary" href="experience.html">View Experience</a>
-          <a class="button secondary" href="contact.html">Get In Touch</a>
+          <a class="button primary" href="project.html#personal-cloud">See the Personal Cloud</a>
+          <a class="button secondary" href="experience.html">View Experience</a>
+          <a class="button secondary" href="contact.html">Contact</a>
         </div>
       </div>
       <aside class="hero-card" aria-label="Profile summary">
         <img class="profile-photo" src="dp.jpg" alt="Pradheep Nagarajan">
         <div class="quick-facts">
           <div class="fact">
-            <strong>5+ years</strong>
-            <span>Cloud platform, CI/CD, automation, and production infrastructure experience</span>
+            <strong>Dallas, TX</strong>
+            <span>Open to remote and relocation anywhere in the US</span>
           </div>
           <div class="fact">
-            <strong>Distributed Systems</strong>
-            <span>Experience managing cloud-native services, multi-account AWS infrastructure, CI/CD platforms, and cross-team developer workflows</span>
+            <strong>AWS Certified</strong>
+            <span>AWS Certified AI Practitioner, ISC2 Certified in Cybersecurity</span>
           </div>
           <div class="fact">
-            <strong>Observability and Reliability</strong>
-            <span>Experience setting up centralized logging, monitoring, alerting, audit pipelines, incident response workflows, and long-term platform stability improvements</span>
+            <strong>Regulated Environments</strong>
+            <span>HIPAA-audited production infrastructure at Roche / Foundation Medicine</span>
           </div>
         </div>
       </aside>
+    </section>
+
+    <section class="statband" aria-label="Career numbers">
+      <div class="stat">
+        <strong>120+</strong>
+        <span>AWS accounts changed via Terraform network rollouts with zero incidents</span>
+      </div>
+      <div class="stat">
+        <strong>10x</strong>
+        <span>Faster document processing, 5 minutes to 30 seconds, with AWS Bedrock and Textract</span>
+      </div>
+      <div class="stat">
+        <strong>~$350K/yr</strong>
+        <span>Cloud cost savings from cleanup and rightsizing automation I built</span>
+      </div>
+      <div class="stat">
+        <strong>60% to 85%</strong>
+        <span>GenAI chatbot accuracy improvement in production, used by 100+ sales reps</span>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Personal cloud feature">
+      <div class="feature">
+        <div>
+          <p class="eyebrow">What Makes Me Different</p>
+          <h2>Most engineers talk about observability and on-call. I run both at home.</h2>
+          <ul>
+            <li><strong>10+ Docker containers</strong> behind Cloudflare Tunnel and Tailscale, with Authentik SSO (OIDC, SAML, LDAP) for every service</li>
+            <li><strong>Full observability stack:</strong> Prometheus, Grafana, and New Relic monitoring, with PagerDuty paging me when something breaks</li>
+            <li><strong>95% uptime over 12 months</strong> with real daily users who notice when it goes down</li>
+            <li><strong>Local LLMs on Ollama</strong> for private AI workflows with no external model providers</li>
+          </ul>
+          <div class="button-row">
+            <a class="button primary" href="project.html#personal-cloud">Read the full case study</a>
+          </div>
+        </div>
+        <div class="terminal" aria-label="Personal cloud status">
+          <div class="terminal-bar">
+            <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+            <span class="terminal-title">pradheep@homelab: ~ $ status --personal-cloud</span>
+          </div>
+          <div class="terminal-body">
+            <div class="term-line"><span class="key">platform</span><span class="val ok"><span class="pulse"></span>operational</span></div>
+            <div class="term-line"><span class="key">uptime</span><span class="val">95% over the last 12 months</span></div>
+            <div class="term-line"><span class="key">services</span><span class="val">10+ Docker containers</span></div>
+            <div class="term-line"><span class="key">access</span><span class="val">Cloudflare Tunnel + Tailscale + Authentik SSO</span></div>
+            <div class="term-line"><span class="key">monitoring</span><span class="val">Prometheus, Grafana, New Relic</span></div>
+            <div class="term-line"><span class="key">alerting</span><span class="val">PagerDuty</span></div>
+            <div class="term-line"><span class="key">ai</span><span class="val">local LLMs via Ollama</span></div>
+            <div class="term-line"><span class="key">on-call</span><span class="val">me, sole owner and responder</span></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section">
       <div class="section-header">
         <div>
           <p class="eyebrow">Focus Areas</p>
-          <h2>Platform work with operational depth.</h2>
+          <h2>Platform work, backed by numbers.</h2>
         </div>
-        <p>My work sits at the intersection of infrastructure, developer experience, security, observability, automation, and production GenAI enablement.</p>
+        <p>Every focus area below comes with a shipped, measurable result from production, not a bullet point of tools I once touched.</p>
+      </div>
+      <div class="grid four">
+        <article class="card">
+          <span class="metric">CI/CD Platforms</span>
+          <h3>Jenkins and GitHub at enterprise scale</h3>
+          <p>Jenkins administration with Configuration as Code, ECS-backed agent clusters, GitHub Enterprise Server, Artifactory, SonarQube, Prisma, and Checkov.</p>
+          <p class="proof">500+ pipelines migrated solo, untangling cross-account IAM, KMS, S3, and firewall blockers</p>
+        </article>
+        <article class="card">
+          <span class="metric">AWS Infrastructure</span>
+          <h3>Terraform across a multi-account org</h3>
+          <p>ECS, Lambda, VPC, IAM, S3, RDS, EventBridge, SSM, KMS, and Service Control Policies, all managed as code across a regulated AWS organization.</p>
+          <p class="proof">120+ accounts, zero-incident network rollouts</p>
+        </article>
+        <article class="card">
+          <span class="metric">Observability</span>
+          <h3>Logging, monitoring, and alerting</h3>
+          <p>Cribl, OpenTelemetry, Logz.io, New Relic, Splunk, Grafana, Prometheus, and PagerDuty. Centralized pipelines that teams actually adopt.</p>
+          <p class="proof">500GB+/day platform, teams onboarded with minimal changes on their end</p>
+        </article>
+        <article class="card">
+          <span class="metric">GenAI on AWS</span>
+          <h3>Production AI applications</h3>
+          <p>AWS Bedrock, OpenSearch vector databases, and Textract behind secure multi-account infrastructure in HIPAA-audited environments.</p>
+          <p class="proof">Chatbot accuracy 60% to 85% for 100+ sales reps</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Selected Wins</p>
+          <h2>Problems I have actually solved.</h2>
+        </div>
       </div>
       <div class="grid three">
         <article class="card">
-          <span class="metric">CI/CD</span>
-          <h3>Jenkins platform engineering</h3>
-          <p>Jenkins server administration, ECS-backed agent clusters, Configuration as Code, plugin management, JFrog/Artifactory, SonarQube, Prisma, and shared libraries.</p>
+          <h3>Killed a multi-month JVM memory leak</h3>
+          <p>Diagnosed a Jenkins metaspace leak through heap dump analysis, tuned JVM arguments, and cleared terabytes of accumulated EFS data. The platform has run without recurrence for 2+ years.</p>
         </article>
         <article class="card">
-          <span class="metric">AWS</span>
-          <h3>Cloud infrastructure</h3>
-          <p>AWS ECS, VPC, Lambda, CloudWatch, CloudTrail, IAM, Bedrock, Terraform, CloudFormation, SSM, SCP, EventBridge, S3, and DynamoDB.</p>
+          <h3>Cut document processing from 5 minutes to 30 seconds</h3>
+          <p>Built an AI document pipeline with AWS Bedrock and Textract that now handles 200+ biopharma documents per day.</p>
         </article>
         <article class="card">
-          <span class="metric">Ops</span>
-          <h3>Security and observability</h3>
-          <p>Cribl, Logz.io, New Relic, Splunk audit pipelines, Prisma, CheckOv, JFrog Xray, IMDSv2 enforcement, dashboards, alarms, tracing, and compliance workflows.</p>
+          <h3>Cut GitHub licensing costs with automation</h3>
+          <p>Built Active Directory-integrated automation that suspends inactive users and offboards terminated employees, reducing the license seats needed and eliminating annual manual audits.</p>
         </article>
         <article class="card">
-          <span class="metric">AI</span>
-          <h3>GenAI application infrastructure</h3>
-          <p>Secure production GenAI platforms using AWS Bedrock Knowledge Bases, OpenSearch vector databases, encrypted S3 ingestion, Lambda automation, Terraform, and controlled cross-account access patterns.</p>
+          <h3>Hardened an entire AWS org</h3>
+          <p>Enforced IMDSv2 across all production and non-production accounts through Service Control Policies, closing off instance metadata attacks at the organization level.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
       <div class="callout">
-        <p class="eyebrow">Recent Impact</p>
-        <h2>Enterprise platform engineering for regulated production environments.</h2>
-        <p>Led high-impact AWS, CI/CD, observability, and GenAI infrastructure initiatives that improved reliability, strengthened compliance, reduced manual operations, and supported production engineering teams.</p>
+        <p class="eyebrow">Credentials</p>
+        <h2>Certified, published, and battle-tested.</h2>
+        <div class="creds">
+          <span class="cred">AWS Certified AI Practitioner</span>
+          <span class="cred">ISC2 Certified in Cybersecurity</span>
+          <span class="cred">Top performer, AWS GameDay incident-response exercise</span>
+          <span class="cred">Published in Springer, Advances in Smart System Technologies</span>
+          <span class="cred">MS Computer Systems Engineering, Northeastern University</span>
+        </div>
         <div class="button-row">
           <a class="button primary" href="experience.html">Read the work history</a>
+          <a class="button secondary" href="contact.html">Get in touch</a>
         </div>
       </div>
     </section>

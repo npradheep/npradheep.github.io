@@ -3,9 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Selected projects by Pradheep Nagarajan across cloud infrastructure, AI tooling, and full-stack systems.">
+  <meta name="description" content="Projects by Pradheep Nagarajan: a production-grade personal cloud platform, AWS-backed applications, distributed systems, and published embedded systems research.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | Pradheep Nagarajan">
+  <meta property="og:description" content="A production-grade personal cloud with 95% uptime over 12 months, plus AWS-backed applications and published research.">
+  <meta property="og:url" content="https://pradheep.me/project.html">
+  <meta property="og:image" content="https://pradheep.me/dp.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%81%EF%B8%8F%3C/text%3E%3C/svg%3E">
   <title>Projects | Pradheep Nagarajan</title>
-  <link rel="stylesheet" href="style.css?v=20260517">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260706">
 </head>
 <body>
   <header class="site-header">
@@ -23,101 +32,158 @@
 
   <main class="page">
     <section class="section">
-      <p class="eyebrow">Selected Projects</p>
-      <h1>Cloud-native systems, infrastructure builds, and applied software projects.</h1>
-      <p class="lead">Selected work spanning current personal infrastructure, AWS-backed applications, distributed systems, networking, and published embedded systems research.</p>
+      <p class="eyebrow">Projects</p>
+      <h1>I do not stop building when the workday ends.</h1>
+      <p class="lead">The centerpiece is a personal cloud I run like a production platform: monitored, alerted, SSO-protected, and on-call around the clock. Below it, AWS-backed applications, distributed systems, and published research.</p>
       <div class="button-row">
         <a class="button secondary" href="https://github.com/npradheep/">View GitHub Profile</a>
       </div>
     </section>
 
-    <section class="grid two" aria-label="Projects">
-      <article class="card project highlight">
-        <h2>Personal Cloud</h2>
-        <p class="role-meta">Docker | Active Directory | VPN | SSO | Logging | Monitoring | Alerting</p>
-        <ul>
-          <li>Built a Docker-based home server/NAS hosting a personal AI chatbot, logging, monitoring, alerting, and automated backup workflows.</li>
-          <li>Designed the environment around secure remote access, centralized identity, and operational visibility.</li>
-        </ul>
+    <section class="section" id="personal-cloud">
+      <article class="case-study">
+        <p class="eyebrow">Featured Case Study</p>
+        <h2>Personal Cloud: a self-hosted platform run to production standards.</h2>
+        <div class="case-stats">
+          <div class="case-stat">
+            <strong>95%</strong>
+            <span>Uptime over the last 12 months</span>
+          </div>
+          <div class="case-stat">
+            <strong>10+</strong>
+            <span>Docker containers in daily service</span>
+          </div>
+          <div class="case-stat">
+            <strong>1</strong>
+            <span>On-call engineer: me, no rotation, no escalation path</span>
+          </div>
+        </div>
+        <div class="case-study-grid">
+          <div>
+            <h3>Why it matters</h3>
+            <p>Anyone can list monitoring tools on a resume. This platform is different: it has <strong>real daily users</strong> who notice outages, and I am the <strong>sole owner and sole on-call responder</strong>. Every architectural decision, every incident, every 2 AM page is mine. It replicates the enterprise patterns I use professionally, networking, SSO, observability, alerting, and incident response, at a scale I fully control and pay for myself.</p>
+            <h3>How it is built</h3>
+            <p><strong>Access and identity:</strong> Services are exposed through Cloudflare Tunnel and Tailscale, never through open ports. Authentik provides single sign-on across every application via OIDC, SAML, and LDAP, with per-user storage.</p>
+            <p><strong>Observability and incident response:</strong> Prometheus and Grafana handle metrics and dashboards, New Relic provides application monitoring, and PagerDuty pages me when something breaks. Incidents are tracked and resolved the same way I handle them at work.</p>
+            <p><strong>Private AI:</strong> Ollama runs local LLMs for private AI workflows, which lets me test prompt behavior and model tradeoffs without sending data to external providers.</p>
+          </div>
+          <div>
+            <div class="terminal" aria-label="Personal cloud status">
+              <div class="terminal-bar">
+                <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+                <span class="terminal-title">pradheep@homelab: ~ $ status --personal-cloud</span>
+              </div>
+              <div class="terminal-body">
+                <div class="term-line"><span class="key">platform</span><span class="val ok"><span class="pulse"></span>operational</span></div>
+                <div class="term-line"><span class="key">uptime</span><span class="val">95% over the last 12 months</span></div>
+                <div class="term-line"><span class="key">services</span><span class="val">10+ Docker containers</span></div>
+                <div class="term-line"><span class="key">ingress</span><span class="val">Cloudflare Tunnel, Tailscale</span></div>
+                <div class="term-line"><span class="key">identity</span><span class="val">Authentik SSO (OIDC, SAML, LDAP)</span></div>
+                <div class="term-line"><span class="key">metrics</span><span class="val">Prometheus + Grafana</span></div>
+                <div class="term-line"><span class="key">apm</span><span class="val">New Relic</span></div>
+                <div class="term-line"><span class="key">paging</span><span class="val">PagerDuty</span></div>
+                <div class="term-line"><span class="key">ai</span><span class="val">Ollama, local LLMs</span></div>
+                <div class="term-line"><span class="key">users</span><span class="val">real people, daily</span></div>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Docker</span>
+              <span class="tag">Cloudflare Tunnel</span>
+              <span class="tag">Tailscale</span>
+              <span class="tag">Authentik SSO</span>
+              <span class="tag">Prometheus</span>
+              <span class="tag">Grafana</span>
+              <span class="tag">New Relic</span>
+              <span class="tag">PagerDuty</span>
+              <span class="tag">Ollama</span>
+            </div>
+            <p class="repo-link"><a href="https://github.com/npradheep/home-server">github.com/npradheep/home-server</a></p>
+          </div>
+        </div>
       </article>
+    </section>
 
-      <article class="card project">
-        <h2>Discussion Forum</h2>
-        <p class="role-meta">Node.js | Sequelize | PostgreSQL | Mocha | GitHub Actions | AWS | Terraform</p>
-        <ul>
-          <li>Built a cloud-native JavaScript application backed by AWS RDS/PostgreSQL, with automated QA tests, AMI builds, secure IAM roles, and Terraform-based CI/CD deployment.</li>
-          <li>Used infrastructure automation and GitHub Actions to support repeatable deployments.</li>
-        </ul>
-      </article>
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Cloud and Software Projects</p>
+          <h2>AWS-backed applications and systems.</h2>
+        </div>
+      </div>
+      <div class="grid two" aria-label="Projects">
+        <article class="card project">
+          <h2>Discussion Forum</h2>
+          <p class="role-meta">Node.js | Express | PostgreSQL | Mocha | GitHub Actions | Terraform | AWS</p>
+          <ul>
+            <li>Built a REST API forum in Node.js and Express with authentication, file attachments, Mocha test coverage, and CloudWatch metrics.</li>
+            <li>Provisioned the full AWS stack, ALB, Auto Scaling, RDS, S3, Lambda, and CodeDeploy, entirely through Terraform and GitHub Actions.</li>
+          </ul>
+        </article>
 
-      <article class="card project">
-        <h2>Job-Resume Matching System</h2>
-        <p class="role-meta">Kubernetes | gRPC | REST APIs | AWS S3 | DynamoDB</p>
-        <ul>
-          <li>Deployed a scalable, load-balanced application with a microservice architecture on Kubernetes.</li>
-          <li>Improved database query performance by migrating blobs to AWS S3 and referencing object URLs in DynamoDB.</li>
-        </ul>
-      </article>
+        <article class="card project">
+          <h2>Job-Resume Matching System</h2>
+          <p class="role-meta">Kubernetes | gRPC | REST APIs | AWS S3 | DynamoDB</p>
+          <ul>
+            <li>Deployed a scalable, load-balanced microservice application on Kubernetes.</li>
+            <li>Improved database query performance by moving blobs to AWS S3 and referencing object URLs in DynamoDB.</li>
+          </ul>
+          <p class="repo-link"><a href="https://github.com/npradheep/Job-Resume_Match">github.com/npradheep/Job-Resume_Match</a></p>
+        </article>
 
-      <article class="card project">
-        <h2>Home Automation System</h2>
-        <p class="role-meta">Jenkins | AWS IoT Core | MQTT | Lambda | Elasticsearch | Kibana</p>
-        <ul>
-          <li>Configured a CI/CD pipeline using Jenkins and Bitbucket to reduce deployment and testing time.</li>
-          <li>Enabled cloud-to-device communication with AWS IoT Core and MQTT, then visualized trends with Elasticsearch, Kibana, and CloudWatch.</li>
-        </ul>
-      </article>
+        <article class="card project">
+          <h2>Home Automation System</h2>
+          <p class="role-meta">Jenkins | AWS IoT Core | MQTT | Lambda | Elasticsearch | Kibana</p>
+          <ul>
+            <li>Configured a Jenkins and Bitbucket CI/CD pipeline to cut deployment and testing time.</li>
+            <li>Enabled cloud-to-device communication with AWS IoT Core and MQTT, visualized trends with Elasticsearch, Kibana, and CloudWatch.</li>
+          </ul>
+          <p class="repo-link"><a href="https://github.com/npradheep/home-automation-system">github.com/npradheep/home-automation-system</a></p>
+        </article>
 
-      <article class="card project">
-        <h2>Diet Tracker Web Application</h2>
-        <p class="role-meta">Node.js | MongoDB | React | HTML5 | CSS3 | AWS EC2 | AWS S3</p>
-        <ul>
-          <li>Planned and engineered RESTful web services using Node.js to manipulate a MongoDB database with CRUD functionality.</li>
-          <li>Built the user interface with JavaScript, HTML5, CSS3, React, and supporting libraries.</li>
-          <li>Served the production React application from AWS S3 while interacting with a Node.js server running on AWS EC2.</li>
-        </ul>
-      </article>
+        <article class="card project">
+          <h2>Marine Navigation and Ocean Crisis Prevention System</h2>
+          <p class="role-meta">Embedded Systems | GPS | Real-Time Maps | Published Research</p>
+          <ul>
+            <li>Built an interface to manage GPS coordinate data from embedded systems, with a real-time map panel for device locations.</li>
+            <li>Implemented push notifications that cut alert wait time from 2 minutes to instant delivery.</li>
+          </ul>
+          <p><a href="https://doi.org/10.1007/978-981-15-5029-4_35">Published in Advances in Smart System Technologies, Springer</a></p>
+        </article>
+      </div>
+    </section>
 
-      <article class="card project">
-        <h2>Pre-School DayCare Monitoring System</h2>
-        <p class="role-meta">Java | MVC | SOLID | Multithreading | System Design</p>
-        <ul>
-          <li>Developed a Java application conforming to design patterns including Singleton, Factory, MVC, and SOLID principles.</li>
-          <li>Created workflow diagrams and Gantt charts to clearly demonstrate processes and implementation timelines.</li>
-          <li>Improved application responsiveness using multithreading for a better user experience.</li>
-        </ul>
-      </article>
-
-      <article class="card project">
-        <h2>Ad-Hoc Network Infrastructure in Linux</h2>
-        <p class="role-meta">Linux | DNS | DHCP | NFS | Apache | SSH | Firewall | IPSec</p>
-        <ul>
-          <li>Designed an ad-hoc network architecture by configuring DNS and DHCP servers for IPv4 and IPv6 allocation.</li>
-          <li>Deployed NFS, Apache web, and backup services through SSH and scheduled backups with crontab.</li>
-          <li>Tested network security through ARP poisoning exercises and implemented firewall rules and IPSec tunnels for secure communication.</li>
-        </ul>
-      </article>
-
-      <article class="card project">
-        <h2>Multi-National Company Network Simulation</h2>
-        <p class="role-meta">Cisco Packet Tracer | VLAN | OSPF | DHCP | HSRP | RSTP | LACP | ACL</p>
-        <ul>
-          <li>Emulated a virtual enterprise network using VLANs, OSPF routing, and DHCP for dynamic IP address assignment.</li>
-          <li>Demonstrated redundancy with HSRP and RSTP, and improved link speed by using LACP.</li>
-          <li>Modeled a secure network with Access Control Lists, PortFast, and BPDU guard.</li>
-        </ul>
-      </article>
-
-      <article class="card project">
-        <h2>Marine Navigation and Ocean Crisis Prevention System</h2>
-        <p class="role-meta">Embedded Systems | GPS | Real-Time Maps | Push Notifications | Published Research</p>
-        <ul>
-          <li>Developed an interface to manage GPS coordinate data received from embedded systems.</li>
-          <li>Implemented a push notification system that reduced alert wait time from 2 minutes to instant delivery.</li>
-          <li>Designed a real-time map panel to visualize the location of connected embedded systems.</li>
-        </ul>
-        <p><a href="https://doi.org/10.1007/978-981-15-5029-4_35">Publication: Advances in Smart System Technologies, Springer</a></p>
-      </article>
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Earlier Work</p>
+          <h2>Networking, systems, and application foundations.</h2>
+        </div>
+      </div>
+      <div class="grid two">
+        <article class="card project">
+          <h3>Ad-Hoc Network Infrastructure in Linux</h3>
+          <p class="role-meta">Linux | DNS | DHCP | NFS | Apache | SSH | Firewall | IPSec</p>
+          <p>Configured DNS and DHCP for IPv4 and IPv6, deployed NFS, Apache, and scheduled backups, then tested security with ARP poisoning exercises, firewall rules, and IPSec tunnels.</p>
+        </article>
+        <article class="card project">
+          <h3>Multi-National Company Network Simulation</h3>
+          <p class="role-meta">Cisco Packet Tracer | VLAN | OSPF | HSRP | RSTP | LACP | ACL</p>
+          <p>Emulated an enterprise network with VLANs, OSPF, and DHCP, added redundancy through HSRP and RSTP, and secured it with ACLs, PortFast, and BPDU guard.</p>
+          <p class="repo-link"><a href="https://github.com/npradheep/Cisco-Packet-Tracer">github.com/npradheep/Cisco-Packet-Tracer</a></p>
+        </article>
+        <article class="card project">
+          <h3>Diet Tracker Web Application</h3>
+          <p class="role-meta">Node.js | MongoDB | React | AWS EC2 | AWS S3</p>
+          <p>Built RESTful services in Node.js over MongoDB with a React frontend, served from AWS S3 against a Node.js server on EC2.</p>
+          <p class="repo-link"><a href="https://github.com/npradheep/diettracker">github.com/npradheep/diettracker</a></p>
+        </article>
+        <article class="card project">
+          <h3>Pre-School DayCare Monitoring System</h3>
+          <p class="role-meta">Java | MVC | SOLID | Multithreading</p>
+          <p>Developed a Java application using Singleton, Factory, and MVC patterns with SOLID principles, and improved responsiveness with multithreading.</p>
+          <p class="repo-link"><a href="https://github.com/npradheep/DayCare">github.com/npradheep/DayCare</a></p>
+        </article>
+      </div>
     </section>
   </main>
 

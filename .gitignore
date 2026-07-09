@@ -1,0 +1,6 @@
+# Local tooling
+.claude/
+
+# Draft redesign variants, not part of the deployed site
+v2-*.html
+compare.html
